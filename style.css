@@ -1,0 +1,316 @@
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+/* import the fonts from here */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Itim&display=swap');
+
+body {
+    font-family: "IBM Plex Sans", sans-serif;
+    margin: auto;
+    background: #ebfbe8;
+    font-optical-sizing: auto;
+    font-style: normal;
+    color: #061902;
+    /*best for preventing a horizontal scroll bar*/
+    width: 90ch;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    font-family: "Itim", sans-serif;
+    text-align: center;
+    /* font-size: 2rem; */
+}
+
+.menuToggle {
+    padding-right: 1rem;
+}
+
+p {
+    line-height: 1.5;
+    text-align: center;
+}
+
+#menuOpening,
+#menuClosing {
+    cursor: pointer;
+}
+
+#menuClosing {
+    display: none;
+}
+
+#mainMenu {
+    /* checks the menu ID by default */
+    height: 0;
+    display: none;
+}
+
+#mainMenu.open {
+    /* checks the menu ID when it has the "open" class */
+    height: auto;
+    display: flex;
+}
+
+header {
+    background-color: #1FE45B;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    overflow: hidden;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+header nav {
+    background: #008B2A;
+    padding: 0 1rem;
+    flex-basis: 100%;
+}
+
+header nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li {
+    display: block;
+}
+
+header nav ul a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 1rem 0;
+    width: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+
+footer {
+    background-color: #008B2A;
+    color: #f4f5f4;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
+}
+
+footer h1 {
+    display: flex;
+    flex-direction: column;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    margin: 0;
+    padding: 0 1rem;
+    flex-basis: 100%;
+}
+
+footer ul li {
+    display: block;
+    max-width: 25%;
+}
+
+footer ul a {
+    padding: 25px 0;
+}
+
+ul li {
+    display: block;
+    align-items: center;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.carousel {
+    max-width: 1400px;
+    margin: auto;
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+    color: white;
+}
+
+.swiper-slide {
+    line-height: 0;
+}
+
+.text-overlay {
+    position: absolute;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 100%);
+    z-index: 1;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+}
+
+.text-overlay>* {
+    max-width: 600px;
+    line-height: 1.5;
+}
+
+.text-overlay a {
+    display: block;
+    background: #036c23;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    margin-top: 1rem;
+    font-weight: bold;
+}
+
+.text-overlay h2 {
+    font-family: 'Itim', sans-serif;
+    font-size: 3rem;
+}
+
+.flexContainer {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexContainer>* {
+    min-width: 100px;
+}
+
+.gridElement {
+    padding: 20px;
+    display: flex;
+}
+
+.card {
+    max-width: 1150px;
+    margin: auto;
+    padding: 1em 2em;
+    display: flex;
+    background-color: #7BE762;
+    /* Add shadows to create the "card" effect */
+    box-shadow: 0 4px 8px 0 #00000033;
+    transition: 0.3s;
+}
+
+/* On mouse-over, add a deeper shadow */
+.card:hover {
+    box-shadow: 0 8px 16px 0 #00000033;
+}
+
+/* Add some padding inside the card container */
+.containment {
+    padding: 2px 16px;
+
+}
+
+@media screen and (width >=800px) {
+
+    /* desktop specific stuff since it's over 800px*/
+    header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+
+    header nav {
+        background: transparent;
+        padding: 1rem;
+    }
+
+    #mainMenu {
+        height: auto;
+        display: contents;
+    }
+
+    .menuToggle {
+        display: none;
+    }
+
+    header nav ul,
+    footer ul {
+        flex-direction: row;
+        justify-content: flex-end;
+        gap: 1.5rem;
+    }
+
+    header nav ul a,
+    footer ul a {
+        padding: 25px 0;
+    }
+
+    header nav ul a {
+        color: black;
+    }
+
+    footer ul a {
+        color: #f4f5f4;
+    }
+
+    header nav ul a:hover {
+        color: #39560b;
+        transition: color 300ms ease-in-out;
+    }
+
+    header nav ul a:after {
+        content: "";
+        display: block;
+        height: 2rem;
+        width: 125%;
+        transform: translateX(-50%) translateY(-50%);
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        background: #a9ffa3;
+        border-radius: 5px;
+        z-index: -1;
+        opacity: 0;
+        visibility: hidden;
+        transition: top 300ms ease-in-out, opacity 300ms ease-in-out, visibility 300ms ease-in-out;
+    }
+
+    header nav ul a:hover:after {
+        top: 50%;
+        opacity: 1;
+        visibility: visible;
+    }
+}

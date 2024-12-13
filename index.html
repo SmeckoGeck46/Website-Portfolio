@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="swiper.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Richie Scassellati's Portfolio</title>
+  </head>
+  <body>
+    <header>
+      <h1>Richie Scassellati</h1>
+      <div class="menuToggle">
+        <!-- "id" can be used once, "class" can be used multiple times -->
+        <img id="menuOpening" src="images/menu.svg" alt="Open Menu" />
+        <img id="menuClosing" src="images/close.svg" alt="Open Menu" />
+      </div>
+      <nav id="mainMenu">
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="pageArt.html">Art</a></li>
+          <li><a href="pageMusic.html">Music</a></li>
+          <li><a href="pageVideo.html">YouTube</a></li>
+        </ul>
+      </nav>
+    </header>
+    <h1>Richie “Smecko Geck” Scassellati</h1>
+    <h3>Artist • Musician • YouTuber • Voice actor</h3>
+    <div class="swiper carousel">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/previews/preview_art.png" alt="Art page preview" />
+          <div class="text-overlay">
+            <h2>Richie's Art</h2>
+            <p>Check out some of my art!</p>
+            <a href="pageArt.html">Go to the Art Page</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="images/previews/preview_music.png"
+            alt="Music page preview"
+          />
+          <div class="text-overlay">
+            <h2>Richie's Music</h2>
+            <p>Listen to some of my music!</p>
+            <a href="pageMusic.html">Go to the Music Page</a>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <img
+            src="images/previews/preview_video.png"
+            alt="Video page preview"
+          />
+          <div class="text-overlay">
+            <h2>Richie's YouTube</h2>
+            <p>Watch some of my YouTube videos!</p>
+            <a href="pageVideo.html">Go to the Video Page</a>
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+    <div class="card">
+      <img
+        src="images/Richie_selfie.jpg"
+        alt="Photo of Richie Scassellati"
+        width="45%"
+        height="45%"
+      />
+      <div class="containment">
+        <h3>Meet the artist!</h3>
+        <p>
+          My name is Richie Scassellati, and I’m an artist, musician, aspiring
+          voice actor, and YouTuber. I attend Seton Hill University, and I’m
+          majoring in Graphic Design with a focus on animation.<br /><br />This
+          is my website to show you a small glimpse of what I am capable of.
+        </p>
+      </div>
+    </div>
+    <!-- Footer stuff -->
+    <footer>
+      <img
+        src="images/RNVS_logo.svg"
+        alt="Richie's logo"
+        width="25%"
+        height="25%"
+      />
+      <ul>
+        <li><h1>Follow me!</h1></li>
+        <li>
+          <a href="https://www.youtube.com/@richiesmeckgeckscas46" target="_new"
+            ><img
+              src="images/socialMediaLogos/youtube-icon.svg"
+              alt="YouTube account icon"
+              width="75%"
+              height="75%"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.twitter.com/SmeckoGeck" target="_new"
+            ><img
+              src="images/socialMediaLogos/logos--twitterX.svg"
+              alt="Twitter/X account icon"
+              width="75%"
+              height="75%"
+          /></a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/smecko_geck/" target="_new"
+            ><img
+              src="images/socialMediaLogos/logos--instagram-icon.svg"
+              alt="Instagram account icon"
+              width="75%"
+              height="75%"
+          /></a>
+        </li>
+        <li>
+          <a href="https://smeckogeck.newgrounds.com" target="_new"
+            ><img
+              src="images/socialMediaLogos/military-tank-icon.svg"
+              alt="Newgrounds account icon"
+              width="75%"
+              height="75%"
+          /></a>
+        </li>
+      </ul>
+    </footer>
+    <script src="menu.js"></script>
+    <script src="swiper.min.js"></script>
+    <script>
+      var swiper = new Swiper(".carousel", {
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        loop: true,
+        autoHeight: true,
+      });
+    </script>
+  </body>
+</html>
